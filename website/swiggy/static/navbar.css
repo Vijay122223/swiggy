@@ -1,0 +1,83 @@
+/* 1. Universal reset and font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* 2. Navbar container: Flex layout for alignment */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;       /* Dark background for contrast */
+  padding: 10px 20px;            /* Comfortable horizontal and vertical padding */
+}
+
+/* 3. Logo styling */
+.navbar .logo {
+  font-size: 1.5em;
+  color: white;
+}
+
+/* 4. Navigation links container styling */
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+}
+
+/* 5. Individual links: spacing and link aesthetics */
+.navbar .nav-links li {
+  margin-left: 20px;
+}
+
+.navbar .nav-links li a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+/* 6. Hover and active link effects */
+.navbar .nav-links li a:hover {
+  background-color: #555;
+}
+
+.navbar .nav-links li a.active {
+  background-color: #555;
+}
+
+/* 7. Responsive design with hamburger menu at smaller screens */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar .nav-links {
+    flex-direction: column;
+    width: 100%;
+    display: none; /* Hidden by default; toggled via JavaScript */
+  }
+
+  .navbar .nav-links.responsive {
+    display: flex;
+  }
+
+  .navbar .nav-links li {
+    margin: 10px 0;
+  }
+
+  /* A simple hamburger icon style */
+  .navbar .menu-icon {
+    display: block;
+    cursor: pointer;
+    color: white;
+    font-size: 1.5em;
+  }
+}

@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block content %} 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swiggy Clone UI</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'home.css' %}">
+
+</head>
+<body>
+  <section class="hero">
+    <h2>Order food from your favourite Royal Bhavan🍕</h2>
+  </section>
+
+  <div class="search-box">
+    <input type="text" placeholder="Search for restaurants or food...">
+    <button>Search</button>
+  </div>
+
+  <section class="restaurants">
+    <div class="card">
+      <img src="{% static 'images/Pizza.webp' %}" alt="Pizza">
+      <h3>Pizza Hut</h3>
+      <p>Fast Food, Italian</p>
+    </div>
+    <div class="card">
+      <img src="{% static 'images/burger.webp' %}" alt="Burger">
+      <h3>Burger King</h3>
+      <p>Burgers, American</p>
+    </div>
+    <div class="card">
+      <img src="{% static 'images/briyani.webp' %}" alt="Biryani">
+      <h3>Biryani House</h3>
+      <p>Indian, Biryani</p>
+    </div>
+    <div class="card">
+      <img src="{% static 'images/icecream.webp '%}" alt="Icecream">
+      <h3>Ice Cream Corner</h3>
+      <p>Desserts, Ice Cream</p>
+    </div>
+  </section>
+  
+</body>
+</html>
+
+{% endblock content %}

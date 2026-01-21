@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Royal Bhavan - Home</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'navbar.css' %}">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Royal Bhavan</div>
+      <ul class="nav-links">
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'menu' %}">Menu</a></li>
+        <li><a href="{% url 'signin' %}">signin</a></li>
+        <li><a href="{% url 'signup' %}">signup</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    {% comment %} <section class="welcome">
+      <h1>Welcome to Royal Bhavan</h1>
+      <p>Your favorite destination for authentic South Indian food!</p>
+    </section> {% endcomment %}
+  </main>
+</body>
+</html>
